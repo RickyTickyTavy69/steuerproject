@@ -27,6 +27,12 @@ export default class Taxes {
     this.ESt = this.status ? this.est * 2 : this.est;
 
     console.log(`deine Steuer sind ${this.ESt} Euro`);
+
+    return {
+      taxes: this.ESt,
+      status: this.status,
+      salary: this.salary,
+    };
   }
 }
 

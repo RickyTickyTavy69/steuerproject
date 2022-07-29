@@ -25,3 +25,16 @@ body {
   justify-content: space-between;
   margin-bottom: 5vh;
 }
+
+/*********************************************result********************/
+
+.result {
+  margin-bottom: 10vh;
+}
+
+.result p {
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
