@@ -2,8 +2,8 @@ import Taxes from "./modules/taxes.module.js";
 
 const form = document.querySelector(".taxesForm");
 const button = document.querySelector(".count");
-
-const salary = document.querySelector(".salary");
+const result = document.querySelector(".result");
+const salary = document.querySelector(".salaryresult");
 const status = document.querySelector(".status");
 const Est = document.querySelector(".ESt");
 
@@ -27,5 +27,7 @@ button.addEventListener("click", (event) => {
   let taxesObj = yourTaxes.count();
   salary.innerHTML = yourTaxes.salary;
   status.innerHTML = yourTaxes.status ? "verheiratet" : "unverheiratet";
-  Est.innerHTML = yourTaxes.ESt;
+  Est.innerHTML = `${yourTaxes.ESt} Euros`;
+
+  result.classList.add("active");
 });

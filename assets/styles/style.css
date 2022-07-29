@@ -5,8 +5,11 @@
 }
 
 body {
-  max-width: 800px;
+  font-size: 0.9em;
+  max-width: 1400px;
   margin: 10vh auto;
+  text-align: center;
+  background-color: pink;
 }
 
 /*=================================================TaxesApp=========================================================*/
@@ -18,6 +21,9 @@ body {
   flex-direction: column;
   max-width: 500px;
   margin: 15vh auto;
+  border: 5px double red;
+  padding: 4%;
+  border-radius: 15px;
 }
 
 .taxesForm div {
@@ -26,15 +32,69 @@ body {
   margin-bottom: 5vh;
 }
 
+.isMarried {
+  max-width: 170px;
+  margin: 0 auto;
+}
+
+.married {
+  margin-right: 100px;
+}
+
+.salary {
+  background-color: #ffc0cb;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 2% 5%;
+}
+
+.salary:focus {
+  outline: none;
+  border: 2px solid red;
+  background-color: #f7a3b1;
+}
+
+.count {
+  background-color: transparent;
+  padding: 4%;
+  border: 4px solid red;
+  border-radius: 15px;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.count:hover {
+  border: 4px solid rgb(232, 140, 11);
+  transition: 0.3s;
+}
+
 /*********************************************result********************/
 
 .result {
-  margin-bottom: 10vh;
+  display: none;
 }
 
-.result p {
-  max-width: 500px;
+.result.active {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10vh;
+  border: 1px solid black;
+}
+
+.result.active p {
+  max-width: 600px;
+  gap: 300px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 2vh auto;
+}
+
+/******************************************footer*****************************************************/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
 }

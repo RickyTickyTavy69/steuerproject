@@ -16,14 +16,21 @@
         <form class="taxesForm">
           <div>
             <label for="Einkommen">Zu versteuerndes Einkommen(Euro)</label>
-            <input name="salary" id="Einkommen" type="text" />
+            <input class="salary" name="salary" id="Einkommen" type="text" />
           </div>
-          <div>
-            <input type="radio" id="statusMarried" value="1" name="status" />
+          <div class="isMarried">
+            <input
+              class="married"
+              type="radio"
+              id="statusMarried"
+              value="1"
+              name="status"
+            />
             <label for="statusMarried">Verheiratet</label>
           </div>
-          <div>
+          <div class="isMarried">
             <input
+              class="married"
               type="radio"
               id="statusNotMarried"
               value="0"
@@ -33,13 +40,13 @@
             <label for="statusNotMarried">Nicht verheiratet</label>
           </div>
           <div>
-            <h2>Berechnungsjahr 2021</h2>
+            <h2>(Berechnungsjahr 2021)</h2>
           </div>
           <button class="count">Berechnen</button>
         </form>
 
         <section class="result">
-          <p>Dein Eikommen ist <span class="salary"></span></p>
+          <p>Dein Eikommen ist <span class="salaryresult"></span></p>
           <p>Dein Status ist <span class="status"></span></p>
           <p>Dein Einkommenssteuer ist <span class="ESt"></span></p>
         </section>
@@ -47,9 +54,9 @@
     </main>
     <footer>
       diese App wurde einwickelt von Artem Bakirov
-      <p>Github</p>
-      <p>Facebook</p>
-      <p>Telegram</p>
+      <p><a href="https://github.com/RickyTickyTavy69">Github</a></p>
+      <p><a href="#">Facebook</a></p>
+      <p><a href="#">Telegram</a></p>
     </footer>
     <script type="module" src="./assets/scripts/script.js"></script>
   </body>
