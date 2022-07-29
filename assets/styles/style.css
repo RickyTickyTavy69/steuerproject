@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 800px;
+  margin: 10vh auto;
+}
+
+/*=================================================TaxesApp=========================================================*/
+
+/*************************************************Form***************************************************************/
+
+.taxesForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 15vh auto;
+}
+
+.taxesForm div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Berechne dein Einkommenssteuer jetzt! Locker-Flockig!</h1>
+    </header>
+    <main>
+      <section class="taxesApp">
+        <form class="taxesForm">
+          <div>
+            <label for="Einkommen">Zu versteuerndes Einkommen(Euro)</label>
+            <input name="salary" id="Einkommen" type="text" />
+          </div>
+          <div>
+            <input type="radio" id="statusMarried" value="1" name="status" />
+            <label for="statusMarried">Verheiratet</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="statusNotMarried"
+              value="0"
+              name="status"
+              checked
+            />
+            <label for="statusNotMarried">Nicht verheiratet</label>
+          </div>
+          <div>
+            <h2>Berechnungsjahr 2021</h2>
+          </div>
+          <button class="count">Berechnen</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      diese App wurde einwickelt von Artem Bakirov
+      <p>Github</p>
+      <p>Facebook</p>
+      <p>Telegram</p>
+    </footer>
+    <script type="module" src="./assets/scripts/script.js"></script>
+  </body>
+</html>
