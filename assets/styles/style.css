@@ -11,8 +11,66 @@ body {
   text-align: center;
   background-color: pink;
 }
+/********************************************header*******************************************/
+.App {
+  top: 5vh;
+  right: 5%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chooseAppOptions {
+  display: none;
+}
+
+.chooseAppOptions.active {
+  display: block;
+  cursor: pointer;
+}
+
+.chooseAppSelect {
+  cursor: pointer;
+  width: 30%;
+}
+
+.chooseApp {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 /*=================================================TaxesApp=========================================================*/
+
+.taxesApp {
+  display: none;
+}
+
+.taxesApp.active {
+  display: block;
+}
+
+.taxesApp2 {
+  display: none;
+}
+
+.taxesApp2.active {
+  display: block;
+}
+
+.taxesApp2 h2 {
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.resultPercent {
+  margin-bottom: 3vh;
+}
+
+.resultMoney {
+  margin-bottom: 3vh;
+}
 
 /*************************************************Form***************************************************************/
 
@@ -20,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  margin: 15vh auto;
+  margin: 10vh auto;
   border: 5px double red;
   padding: 4%;
   border-radius: 15px;
@@ -79,7 +137,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
   border: 1px solid black;
 }
 
@@ -95,6 +153,8 @@ body {
 
 footer {
   display: flex;
-  flex-direction: column;
   gap: 5vh;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
 }

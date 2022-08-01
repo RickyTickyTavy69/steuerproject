@@ -9,7 +9,16 @@
   </head>
   <body>
     <header>
-      <h1>Berechne dein Einkommenssteuer jetzt! Locker-Flockig!</h1>
+      <section class="App">
+        <ul class="chooseApp">
+          <div class="chooseAppSelect">Mehrwertsteuer</div>
+          <ul class="chooseAppOptions">
+            <li class="chooseAppOption1">Einkommenssteuer</li>
+            <li class="chooseAppOption2">Mehrwertsteuer</li>
+          </ul>
+        </ul>
+      </section>
+      <h1>Berechne deine Steuer jetzt! Locker-Flockig!</h1>
     </header>
     <main>
       <section class="taxesApp">
@@ -50,6 +59,77 @@
           <p>Dein Status ist <span class="status"></span></p>
           <p>Dein Einkommenssteuer ist <span class="ESt"></span></p>
         </section>
+      </section>
+
+      <section class="taxesApp2 active">
+        <form class="taxesForm2">
+          <h2>was soll berechnet werden?</h2>
+          <div class="NettoBrutto">
+            <input
+              class="NettoBrutto"
+              type="radio"
+              id="fromNetto"
+              value="1"
+              name="nettobrutto"
+            />
+            <label for="fromNetto">von Netto zu Brutto</label>
+          </div>
+
+          <div class="NettoBrutto">
+            <input
+              class="NettoBrutto"
+              type="radio"
+              id="fromBrutto"
+              value="0"
+              name="nettobrutto"
+              checked
+            />
+            <label for="fromBrutto">von Brutto zu Netto</label>
+          </div>
+          <h2>Mehrwertsteuersatz</h2>
+          <div class="TaxesAmount">
+            <input
+              class="TaxesAmount"
+              type="radio"
+              id="19"
+              value="0.19"
+              name="percent"
+            />
+            <label for="19">19%</label>
+          </div>
+
+          <div class="TaxesAmount">
+            <input
+              class="TaxesAmount"
+              type="radio"
+              id="7"
+              value="0.07"
+              name="percent"
+              checked
+            />
+            <label for="7">7%</label>
+          </div>
+          <div class="money">
+            <label for="money"> Nettobetrag/Bruttobetrag in Euro</label>
+            <input
+              type="number"
+              id="money"
+              placeholder="wie viel Geld in Euro"
+              name="money"
+            />
+          </div>
+          <button class="getTaxes">Berechnen</button>
+        </form>
+
+        <h2>Ergebnis</h2>
+        <div class="resultPercent">
+          <p>Mehrwertsteuerbetrag</p>
+          <p class="taxedMoney">.....</p>
+        </div>
+        <div class="resultMoney">
+          <p>Ergebnis</p>
+          <p class="resultTaxedMoney">.....</p>
+        </div>
       </section>
     </main>
     <footer>
