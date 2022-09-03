@@ -7,6 +7,9 @@ const result = document.querySelector(".result");
 const salary = document.querySelector(".salaryresult");
 const status = document.querySelector(".status");
 const Est = document.querySelector(".ESt");
+const statusMarried = document.querySelector(".statusMarried");
+const statusNotMarried = document.querySelector(".statusNotMarried");
+const button2 = document.querySelector(".getTaxes");
 
 const dings = {
   salary: null,
@@ -28,42 +31,59 @@ button.addEventListener("click", (event) => {
   let taxesObj = yourTaxes.count();
   salary.innerHTML = yourTaxes.salary;
   status.innerHTML = yourTaxes.status ? "verheiratet" : "unverheiratet";
-  Est.innerHTML = `${yourTaxes.ESt} Euros`;
+  Est.innerHTML = `${yourTaxes.ESt} Euro`;
 
   result.classList.add("active");
 });
 
+/*********************************************************Klicken des Buttons Count*************************/
+
+button.addEventListener("mousedown", () => {
+  button.classList.add("mousedown");
+});
+
+button.addEventListener("mouseup", () => {
+  button.classList.remove("mousedown");
+});
+
+/**********************************************************RadioInputs*************************************/
+
+statusMarried.addEventListener("click", () => {
+  statusNotMarried.classList.remove("active");
+  statusMarried.classList.add("active");
+})
+
+statusNotMarried.addEventListener("click", () => {
+  statusMarried.classList.remove("active");
+  statusNotMarried.classList.add("active");
+})
+
 /**************************************************chooseApp */
 
-const chooseAppSelector = document.querySelector(".chooseAppSelect");
-const chooseAppOptions = document.querySelector(".chooseAppOptions");
+const appChooseButtons = document.querySelector(".appChoose_buttons");
+
 
 const taxesApp = document.querySelector(".taxesApp");
 const otherTaxesApp = document.querySelector(".taxesApp2");
 
-chooseAppSelector.addEventListener("click", (event) => {
-  chooseAppOptions.classList.toggle("active");
-});
 
-chooseAppOptions.addEventListener("click", (event) => {
-  if (
-    event.target.classList.contains("chooseAppOption1") ||
-    event.target.classList.contains("chooseAppOption2")
-  ) {
-    chooseAppSelector.textContent = event.target.innerHTML;
-    chooseAppOptions.classList.toggle("active");
-    if (event.target.classList.contains("chooseAppOption1")) {
+appChooseButtons.addEventListener("click", (event) => {
+  if ( event.target.classList.contains("option") ) {
+    event.target.classList.add("active");
+
+    if (event.target.classList.contains("einkommen")) {
+      appChooseButtons.children[0].classList.remove("active");
       otherTaxesApp.classList.remove("active");
       taxesApp.classList.add("active");
     }
-    if (event.target.classList.contains("chooseAppOption2")) {
+    if (event.target.classList.contains("mehrwert")) {
+      appChooseButtons.children[1].classList.remove("active");
       taxesApp.classList.remove("active");
       otherTaxesApp.classList.add("active");
     }
   }
 });
 
-console.log(chooseAppSelector.textContent);
 
 /************************************************taxesApp2 */
 
@@ -80,8 +100,9 @@ const taxedMoney = document.querySelector(".taxedMoney");
 const taxedMoneyResult = document.querySelector(".resultTaxedMoney");
 
 form2.addEventListener("input", (event) => {
-  console.log(event.target.name, event.target.value);
+  console.log(event.target, event.target.value);
   data[event.target.name] = event.target.value;
+  event.target.classList.add("active");
 });
 
 getTaxesButton.addEventListener("click", (event) => {
@@ -92,4 +113,40 @@ getTaxesButton.addEventListener("click", (event) => {
   console.log("result Object", resultObj);
   taxedMoney.innerHTML = resultObj.taxedMoney.toFixed(2) + " Euro";
   taxedMoneyResult.innerHTML = resultObj.result.toFixed(2) + " Euro";
+});
+
+/**********************************************Input Buttons*****************************************/
+
+const fromNetto = document.querySelector("label.fromNetto");
+fromNetto.addEventListener("click", () => {
+  fromBrutto.classList.remove("active");
+  fromNetto.classList.add("active");
+})
+
+const fromBrutto = document.querySelector("label.fromBrutto");
+fromBrutto.addEventListener("click", () => {
+  fromNetto.classList.remove("active");
+  fromBrutto.classList.add("active");
+})
+
+const for17 = document.querySelector(".for17");
+for17.addEventListener("click", () => {
+  for19.classList.remove("active");
+  for17.classList.add("active");
+})
+
+const for19 = document.querySelector(".for19");
+for19.addEventListener("click", () => {
+  for17.classList.remove("active");
+  for19.classList.add("active");
+})
+
+/**************************************************button Get Taxes****************************************/
+
+button2.addEventListener("mousedown", () => {
+  button2.classList.add("mousedown");
+});
+
+button2.addEventListener("mouseup", () => {
+  button2.classList.remove("mousedown");
 });
