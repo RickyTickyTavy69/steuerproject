@@ -10,7 +10,6 @@ body {
   margin: 5vh auto;
   text-align: center;
   background-color: pink;
-  font-size: 14px;
 }
 
 /********************************************header*******************************************/
@@ -105,7 +104,6 @@ button.active{
 .taxesForm label{
   line-height: 1.5em;
 }
-
 
 .isMarried {
   max-width: 170px;
@@ -217,9 +215,6 @@ button.active{
   position: absolute;
   top: 50%;
   left: 70%;
-}
-
-.result_container {
   padding-top: 5vh;
   width: 24%;
   height: 40%;
@@ -257,6 +252,16 @@ button.active{
 
 /******************************************SecondTaxesApp*****************************************************/
 
+.taxesApp2{
+  border: 1px solid red;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.taxesForm2{                  /* man muss die form in der Breite begrenzen, und die Breite immer in den queries klein stellen und genau */
+  position: relative;
+  border: 1px solid blue;
+}
 
 label.fromBrutto::before{
   content: "";
@@ -265,8 +270,8 @@ label.fromBrutto::before{
   display: flex;
   box-shadow: inset -6px -6px 14px rgba(244, 238, 245, 0.45), inset 6px 6px 10px rgba(114, 94, 121, 0.29);
   position: absolute;
-  left: 40%;
-  top: -45%;
+  left: 36%;
+  top: 25%;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
@@ -280,8 +285,8 @@ label.fromBrutto.active::before{
   display: flex;
   box-shadow: inset -6px -6px 14px rgba(244, 238, 245, 0.45), inset 6px 6px 10px rgba(114, 94, 121, 0.29);
   position: absolute;
-  left: 40%;
-  top: -45%;
+  left: 36%;
+  top: 25%;
   justify-content: center;
   align-items: center;
   color: red;
@@ -296,8 +301,8 @@ label.fromNetto::before {
   display: flex;
   box-shadow: inset -6px -6px 14px rgba(244, 238, 245, 0.45), inset 6px 6px 10px rgba(114, 94, 121, 0.29);
   position: absolute;
-  left: 40%;
-  top: -50%;
+  left: 36%;
+  top: 15%;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
@@ -311,8 +316,8 @@ label.fromNetto.active::before {
   display: flex;
   box-shadow: inset -6px -6px 14px rgba(244, 238, 245, 0.45), inset 6px 6px 10px rgba(114, 94, 121, 0.29);
   position: absolute;
-  left: 40%;
-  top: -50%;
+  left: 36%;
+  top: 15%;
   justify-content: center;
   align-items: center;
   color: red;
@@ -323,7 +328,6 @@ div.NettoBrutto {
   font-size: 1.2em;
   margin-bottom: 4vh;
   font-weight: 700;
-  position: relative;
 }
 
 input.NettoBrutto {
@@ -462,4 +466,298 @@ label.for17.active::before{
 .for19, .for17{
   font-size: 1.2em;
   font-weight: 700;
+}
+
+/*
+/*
+/***********************************************************@Media queries************************************************/
+
+@media (max-width: 1400px){
+
+  /*******************************************TaxesApp1************************************************************************/
+
+  body {
+    font-size: 0.8em;
+    max-width: 1400px;
+    margin: 5vh auto;
+  }
+
+  .result_container {
+    margin: 10vh 0 8vh 9%;
+    position: static;
+    padding-top: 5vh;
+    width: 80vw;
+    height: 40%;
+  }
+
+  .result.active {
+    display: flex;
+    align-items: center;
+  }
+
+  .taxesApp{
+    margin-bottom: 15vh;
+  }
+
+  /*******************************************TaxesApp2************************************************************************/
+
+  .taxesApp2{
+    border: 1px solid red;
+    padding-right: 10%;
+    padding-left: 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 1200px){
+
+  /*******************************************TaxesApp1************************************************************************/
+
+  body {
+    font-size: 0.7em;
+    margin: 3vh auto;
+  }
+
+  .result_container {
+    margin: 10vh 0 8vh 9%;
+    position: static;
+    padding-top: 5vh;
+    width: 80vw;
+    height: 40%;
+  }
+
+  .result.active {
+    display: flex;
+    align-items: center;
+  }
+
+  .taxesApp{
+    margin-bottom: 15vh;
+  }
+
+  /*******************************************TaxesApp2************************************************************************/
+
+  .taxesApp2{
+    border: 1px solid red;
+    padding-right: 10%;
+    padding-left: 10%;
+    max-width: 992px;
+    margin: 0 auto;
+  }
+
+  .countTaxes{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+    align-items: center;
+  }
+
+  .money{
+    font-size: 1.5em;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  label.for17::before{
+    left: 52%;
+    top: -70%;
+  }
+
+  label.for17.active::before{
+    left: 52%;
+    top: -70%;
+  }
+
+  label.for19::before{
+    left: 22%;
+    top: -70%;
+  }
+
+  label.for19.active::before{
+    left: 22%;
+    top: -70%;
+  }
+
+  label.fromNetto::before, label.fromNetto.active::before{      /* das kann man so umbauen*/
+    left: 30%;
+    top: 15%;
+  }
+
+  label.fromBrutto::before, label.fromBrutto.active::before{
+    left: 30%;
+    top: 25%;
+  }
+
+
+}
+
+@media (max-width: 992px){
+
+  /*******************************************TaxesApp1************************************************************************/
+
+  body {
+    font-size: 0.7em;
+    margin: 3vh auto;
+  }
+
+  .result_container {
+    margin: 10vh 0 8vh 4%;
+    position: static;
+    padding-top: 5vh;
+    width: 90vw;
+    height: 40%;
+  }
+
+  .result{
+    justify-content: space-around;
+    gap: 5%;
+  }
+
+  .result_item_container{
+    border-right: 1px solid red;
+  }
+
+  .result_item_container:last-of-type{
+    border: none;
+  }
+
+  .result.active {
+    display: flex;
+    align-items: center;
+  }
+
+  .taxesApp{
+    margin-bottom: 15vh;
+  }
+
+  /*******************************************TaxesApp2************************************************************************/
+
+  .taxesApp2{
+    border: 1px solid red;
+    padding-right: 0%;
+    padding-left: 0%;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  label.for17::before{
+    left: 49%;
+    top: -70%;
+  }
+
+  label.for17.active::before{
+    left: 49%;
+    top: -70%;
+  }
+
+  label.for19::before{
+    left: 22%;
+    top: -70%;
+  }
+
+  label.for19.active::before{
+    left: 22%;
+    top: -70%;
+  }
+
+  label.fromNetto::before, label.fromNetto.active::before{      /* das kann man so umbauen*/
+    left: 30%;
+    top: 15%;
+  }
+
+  label.fromBrutto::before, label.fromBrutto.active::before{
+    left: 30%;
+    top: 25%;
+  }
+
+}
+
+@media (max-width: 768px){
+
+  /*******************************************TaxesApp1************************************************************************/
+
+  body {
+    font-size: 0.7em;
+    margin: 3vh auto;
+  }
+
+  .result_container {
+    margin: 10vh 0 8vh 4%;
+    position: static;
+    padding-top: 5vh;
+    width: 90vw;
+    height: 40%;
+  }
+
+  label.fromNetto::before, label.fromNetto.active::before{      /* das kann man so umbauen*/
+    left: 30%;
+    top: 13%;
+  }
+
+  label.fromBrutto::before, label.fromBrutto.active::before{
+    left: 30%;
+    top: 22%;
+  }
+
+  .result_item_container{
+    border: none;
+  }
+
+  .result_container h1{
+    display: none;
+  }
+
+  .result{
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 5%;
+  }
+
+  .result.active {
+    display: flex;
+    align-items: center;
+  }
+
+  .taxesApp{
+    margin-bottom: 15vh;
+  }
+
+}
+
+@media (max-width: 570px){
+
+
+  /*******************************************TaxesApp2************************************************************************/
+
+  .taxes_container{
+    margin-top: 10vh;
+  }
+
+  .countTaxes .money{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .moneyInput{
+    margin-top: 5vh;
+    padding: 4% 8%;
+  }
+
+  .getTaxes{
+    padding: 3% 6%;
+  }
+
+  label.fromBrutto::before, label.fromBrutto.active::before{
+    height: 35px;
+    width: 35px;
+  }
+
+  label.fromNetto::before, label.fromNetto.active::before {
+    height: 35px;
+    width: 35px;
+  }
 }
