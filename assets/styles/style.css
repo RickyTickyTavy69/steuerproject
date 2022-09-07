@@ -269,7 +269,7 @@ label.fromBrutto::before{
   box-shadow: inset -6px -6px 14px rgba(244, 238, 245, 0.45), inset 6px 6px 10px rgba(114, 94, 121, 0.29);
   position: absolute;
   left: 36%;
-  top: 25%;
+  top: 20%;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
@@ -284,7 +284,7 @@ label.fromBrutto.active::before{
   box-shadow: inset -6px -6px 14px rgba(244, 238, 245, 0.45), inset 6px 6px 10px rgba(114, 94, 121, 0.29);
   position: absolute;
   left: 36%;
-  top: 25%;
+  top: 20%;
   justify-content: center;
   align-items: center;
   color: red;
@@ -300,7 +300,7 @@ label.fromNetto::before {
   box-shadow: inset -6px -6px 14px rgba(244, 238, 245, 0.45), inset 6px 6px 10px rgba(114, 94, 121, 0.29);
   position: absolute;
   left: 36%;
-  top: 15%;
+  top: 10%;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
@@ -315,7 +315,7 @@ label.fromNetto.active::before {
   box-shadow: inset -6px -6px 14px rgba(244, 238, 245, 0.45), inset 6px 6px 10px rgba(114, 94, 121, 0.29);
   position: absolute;
   left: 36%;
-  top: 15%;
+  top: 10%;
   justify-content: center;
   align-items: center;
   color: red;
@@ -579,12 +579,12 @@ label.for17.active::before{
 
   label.fromNetto::before, label.fromNetto.active::before{      /* das kann man so umbauen*/
     left: 30%;
-    top: 15%;
+    top: 20%;
   }
 
   label.fromBrutto::before, label.fromBrutto.active::before{
     left: 30%;
-    top: 25%;
+    top: 10%;
   }
 
 
@@ -660,12 +660,12 @@ label.for17.active::before{
 
   label.fromNetto::before, label.fromNetto.active::before{      /* das kann man so umbauen*/
     left: 30%;
-    top: 15%;
+    top: 10%;
   }
 
   label.fromBrutto::before, label.fromBrutto.active::before{
     left: 30%;
-    top: 25%;
+    top: 20%;
   }
 
 }
@@ -689,12 +689,12 @@ label.for17.active::before{
 
   label.fromNetto::before, label.fromNetto.active::before{      /* das kann man so umbauen*/
     left: 30%;
-    top: 13%;
+    top: 8%;
   }
 
   label.fromBrutto::before, label.fromBrutto.active::before{
     left: 30%;
-    top: 22%;
+    top: 17%;
   }
 
   .result_item_container{
