@@ -253,14 +253,12 @@ button.active{
 /******************************************SecondTaxesApp*****************************************************/
 
 .taxesApp2{
-  border: 1px solid red;
   padding-right: 10%;
   padding-left: 10%;
 }
 
 .taxesForm2{                  /* man muss die form in der Breite begrenzen, und die Breite immer in den queries klein stellen und genau */
   position: relative;
-  border: 1px solid blue;
 }
 
 label.fromBrutto::before{
@@ -502,7 +500,6 @@ label.for17.active::before{
   /*******************************************TaxesApp2************************************************************************/
 
   .taxesApp2{
-    border: 1px solid red;
     padding-right: 10%;
     padding-left: 10%;
     max-width: 1200px;
@@ -540,7 +537,6 @@ label.for17.active::before{
   /*******************************************TaxesApp2************************************************************************/
 
   .taxesApp2{
-    border: 1px solid red;
     padding-right: 10%;
     padding-left: 10%;
     max-width: 992px;
@@ -636,7 +632,6 @@ label.for17.active::before{
   /*******************************************TaxesApp2************************************************************************/
 
   .taxesApp2{
-    border: 1px solid red;
     padding-right: 0%;
     padding-left: 0%;
     max-width: none;
